@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(glab mr:*)",
+      "Bash(glab mr list:*)",
+      "Bash(glab mr view:*)",
+      "Bash(glab mr create:*)",
+      "Bash(glab mr checkout:*)",
+      "Bash(glab mr diff:*)",
+      "Bash(glab mr merge:*)",
+      "Bash(glab mr approve:*)",
+      "Bash(glab issue:*)",
+      "Bash(glab issue list:*)",
+      "Bash(glab issue view:*)",
+      "Bash(glab issue create:*)",
+      "Bash(glab issue close:*)",
+      "Bash(glab repo:*)",
+      "Bash(glab repo view:*)",
+      "Bash(glab repo clone:*)",
+      "Bash(glab ci:*)",
+      "Bash(glab ci list:*)",
+      "Bash(glab ci view:*)",
+      "Bash(glab ci trace:*)",
+      "Bash(glab ci status:*)",
+      "Bash(glab api:*)",
+      "Bash(glab auth status)",
+      "Bash(glab release:*)",
+      "Bash(glab snippet:*)",
+      "Bash(glab search:*)"
+    ],
+    "deny": [
+      "Bash(glab repo delete:*)",
+      "Bash(glab auth logout)",
+      "Bash(glab api --method DELETE:*)"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+# IDE
+.idea/
+.vscode/
+
+# Local/Private files
+TODO.md
+*.local.*

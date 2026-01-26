@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(phpstorm:*)",
+      "Bash(phpstorm .)",
+      "Bash(phpstorm --line:*)",
+      "Bash(phpstorm --column:*)",
+      "Bash(phpstorm diff:*)",
+      "Bash(phpstorm merge:*)",
+      "Bash(phpstorm format:*)",
+      "Bash(phpstorm inspect:*)",
+      "Bash(idea:*)",
+      "Bash(idea .)",
+      "Bash(idea --line:*)",
+      "Bash(idea diff:*)",
+      "Bash(idea merge:*)",
+      "Bash(idea format:*)",
+      "Bash(idea inspect:*)",
+      "Bash(webstorm:*)",
+      "Bash(webstorm .)"
+    ]
+  }
+}

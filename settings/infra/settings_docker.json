@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker compose:*)",
+      "Bash(docker-compose:*)",
+      "Bash(docker ps:*)",
+      "Bash(docker logs:*)",
+      "Bash(docker exec:*)",
+      "Bash(docker build:*)",
+      "Bash(docker images:*)",
+      "Bash(docker pull:*)",
+      "Bash(docker inspect:*)",
+      "Bash(docker network:*)",
+      "Bash(docker volume ls:*)",
+      "Bash(docker volume inspect:*)",
+      "Bash(docker stats:*)",
+      "Bash(docker top:*)",
+      "Bash(docker cp:*)",
+      "Bash(frankenphp run:*)",
+      "Bash(frankenphp php-server:*)",
+      "Bash(frankenphp php-cli:*)"
+    ],
+    "deny": [
+      "Bash(docker system prune -a:*)",
+      "Bash(docker system prune --all:*)",
+      "Bash(docker rm -f $(docker ps -aq))",
+      "Bash(docker rmi -f $(docker images -aq))",
+      "Bash(docker volume prune -f)",
+      "Bash(docker network prune -f)",
+      "Bash(docker compose down -v --rmi all)"
+    ]
+  }
+}

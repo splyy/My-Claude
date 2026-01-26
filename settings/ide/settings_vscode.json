@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(code:*)",
+      "Bash(code .)",
+      "Bash(code --diff:*)",
+      "Bash(code --goto:*)",
+      "Bash(code --new-window:*)",
+      "Bash(code --reuse-window:*)",
+      "Bash(code --add:*)",
+      "Bash(code --install-extension:*)",
+      "Bash(code --list-extensions)",
+      "Bash(code --show-versions)",
+      "Bash(code --disable-extension:*)",
+      "Bash(code --enable-extension:*)",
+      "Bash(code -r:*)",
+      "Bash(code -n:*)",
+      "Bash(code -g:*)",
+      "Bash(code --wait:*)",
+      "Bash(code --folder-uri:*)",
+      "Bash(code --status)"
+    ],
+    "deny": [
+      "Bash(code --uninstall-extension:*)"
+    ]
+  }
+}

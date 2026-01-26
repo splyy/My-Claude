@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make:*)",
+      "Bash(make -n:*)",
+      "Bash(make -j:*)",
+      "Bash(make --dry-run:*)",
+      "Bash(make help)",
+      "Bash(make install:*)",
+      "Bash(make build:*)",
+      "Bash(make test:*)",
+      "Bash(make clean:*)",
+      "Bash(make dev:*)",
+      "Bash(make start:*)",
+      "Bash(make stop:*)"
+    ],
+    "deny": [
+      "Bash(make uninstall --force)",
+      "Bash(make purge)"
+    ]
+  }
+}

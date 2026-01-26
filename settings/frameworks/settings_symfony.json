@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php bin/console:*)",
+      "Bash(./bin/console:*)",
+      "Bash(symfony console:*)",
+      "Bash(symfony server:*)",
+      "Bash(symfony check:*)",
+      "Bash(symfony local:*)",
+      "Bash(symfony var:*)",
+      "Bash(php bin/console cache:clear:*)",
+      "Bash(php bin/console cache:warmup:*)",
+      "Bash(php bin/console doctrine:*)",
+      "Bash(php bin/console make:*)",
+      "Bash(php bin/console debug:*)",
+      "Bash(php bin/console api:*)",
+      "Bash(php bin/console messenger:*)",
+      "Bash(php bin/console secrets:*)",
+      "Bash(php bin/console translation:*)",
+      "Bash(php bin/console assets:install:*)"
+    ],
+    "deny": [
+      "Bash(php bin/console doctrine:database:drop --force)",
+      "Bash(php bin/console doctrine:schema:drop --force --full-database)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$CLAUDE_FILE_PATH\" == *.php ]]; then php vendor/bin/php-cs-fixer fix \"$CLAUDE_FILE_PATH\" --quiet 2>/dev/null || true; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

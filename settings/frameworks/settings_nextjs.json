@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx next:*)",
+      "Bash(npx next dev:*)",
+      "Bash(npx next build:*)",
+      "Bash(npx next start:*)",
+      "Bash(npx next lint:*)",
+      "Bash(npx next info)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run start:*)",
+      "Bash(npm run lint:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm start:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(npx create-react-app:*)",
+      "Bash(npx react-scripts:*)",
+      "Bash(npx vite:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(npx shadcn:*)",
+      "Bash(npx shadcn-ui:*)",
+      "Bash(npx prisma:*)",
+      "Bash(npx drizzle-kit:*)"
+    ],
+    "deny": [
+      "Bash(npx prisma migrate reset --force)",
+      "Bash(npx prisma db push --force-reset)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$CLAUDE_FILE_PATH\" =~ \\.(js|jsx|ts|tsx|json|css|md)$ ]]; then npx prettier --write \"$CLAUDE_FILE_PATH\" 2>/dev/null || true; fi"
+          }
+        ]
+      }
+    ]
+  }
+}

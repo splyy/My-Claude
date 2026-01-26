@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(composer require:*)",
+      "Bash(composer install:*)",
+      "Bash(composer update:*)",
+      "Bash(composer remove:*)",
+      "Bash(composer dump-autoload:*)",
+      "Bash(composer outdated:*)",
+      "Bash(composer show:*)",
+      "Bash(composer validate)",
+      "Bash(composer run:*)",
+      "Bash(php vendor/bin/phpunit:*)",
+      "Bash(./vendor/bin/phpunit:*)",
+      "Bash(php vendor/bin/phpstan:*)",
+      "Bash(./vendor/bin/phpstan:*)",
+      "Bash(php vendor/bin/php-cs-fixer:*)",
+      "Bash(./vendor/bin/php-cs-fixer:*)",
+      "Bash(php vendor/bin/pest:*)",
+      "Bash(./vendor/bin/pest:*)",
+      "Bash(php vendor/bin/rector:*)",
+      "Bash(./vendor/bin/rector:*)",
+      "Bash(php -v)",
+      "Bash(php -m)",
+      "Bash(php -i)",
+      "Bash(php -l:*)"
+    ],
+    "deny": [
+      "Bash(composer global:*)",
+      "Bash(php -r 'system*)",
+      "Bash(php -r 'exec*)",
+      "Bash(php -r 'shell_exec*)"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -X GET *localhost:9200*)",
+      "Bash(curl -X POST *localhost:9200*)",
+      "Bash(curl -X PUT *localhost:9200*)",
+      "Bash(curl -s *localhost:9200*)",
+      "Bash(curl -XGET *localhost:9200*)",
+      "Bash(curl -XPOST *localhost:9200*)",
+      "Bash(curl -XPUT *localhost:9200*)",
+      "Bash(curl *:9200/_cluster/health*)",
+      "Bash(curl *:9200/_cat/*)",
+      "Bash(curl *:9200/_search*)",
+      "Bash(curl *:9200/_mapping*)",
+      "Bash(curl *:9200/_settings*)",
+      "Bash(curl *:9200/_aliases*)"
+    ],
+    "deny": [
+      "Bash(curl -X DELETE *localhost:9200)",
+      "Bash(curl -X DELETE *:9200/*)",
+      "Bash(curl -XDELETE *:9200/*)",
+      "Bash(curl *:9200/_all)",
+      "Bash(curl *:9200/*/_delete_by_query*)"
+    ]
+  }
+}

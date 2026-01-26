@@ -1,0 +1,51 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan:*)",
+      "Bash(./artisan:*)",
+      "Bash(php artisan serve:*)",
+      "Bash(php artisan make:*)",
+      "Bash(php artisan migrate:*)",
+      "Bash(php artisan db:*)",
+      "Bash(php artisan queue:*)",
+      "Bash(php artisan cache:*)",
+      "Bash(php artisan config:*)",
+      "Bash(php artisan route:*)",
+      "Bash(php artisan view:*)",
+      "Bash(php artisan storage:*)",
+      "Bash(php artisan key:generate)",
+      "Bash(php artisan tinker)",
+      "Bash(php artisan test:*)",
+      "Bash(php artisan schedule:*)",
+      "Bash(./vendor/bin/sail:*)",
+      "Bash(sail:*)",
+      "Bash(php artisan breeze:*)",
+      "Bash(php artisan jetstream:*)",
+      "Bash(php artisan horizon:*)",
+      "Bash(php artisan telescope:*)",
+      "Bash(php artisan nova:*)",
+      "Bash(php artisan livewire:*)",
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(npx vite:*)"
+    ],
+    "deny": [
+      "Bash(php artisan migrate:fresh --force)",
+      "Bash(php artisan db:wipe --force)",
+      "Bash(php artisan down --secret=*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$CLAUDE_FILE_PATH\" == *.php ]]; then ./vendor/bin/pint \"$CLAUDE_FILE_PATH\" --quiet 2>/dev/null || php vendor/bin/php-cs-fixer fix \"$CLAUDE_FILE_PATH\" --quiet 2>/dev/null || true; fi"
+          }
+        ]
+      }
+    ]
+  }
+}
