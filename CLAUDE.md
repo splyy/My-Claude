@@ -20,6 +20,11 @@ my-claude/
 ├── AVANCE.md                   # 🚀 Guide avancé (permissions, CLI, coûts)
 ├── CLAUDE.md                   # 🤖 Ce fichier (instructions projet)
 │
+├── task/                       # 📋 Kit Task System (autonomie Claude)
+│   ├── README.md              # Guide complet du Task System
+│   ├── CLAUDE.md              # Template CLAUDE.md avec Task Protocol
+│   └── .claudeignore          # Template de fichiers à ignorer
+│
 ├── settings/                   # ⚙️ Templates de configuration
 │   ├── README.md              # Documentation des settings
 │   ├── settings.json          # Configuration de base
@@ -178,3 +183,4 @@ cp -r .claude/* monProjet/.claude/
 - [README.md](./README.md) — Concepts fondamentaux Claude Code
 - [AVANCE.md](./AVANCE.md) — Guide avancé (permissions, modèles, CLI)
 - [settings/README.md](./settings/README.md) — Documentation des settings
+- [task/README.md](./task/README.md) — Guide du Task System (autonomie Claude)

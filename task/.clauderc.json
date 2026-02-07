@@ -1,0 +1,16 @@
+{
+  "_NOTE": "Ce fichier est un EXEMPLE CONCEPTUEL. Il n'est PAS reconnu par Claude Code.",
+  "_NOTE2": "Pour la vraie config, utiliser settings.json (voir task/README.md section Config).",
+  "commands": {
+    "allow_modifications": true,
+    "auto_run_tests": true
+  },
+  "agent": {
+    "mode": "orchestrator",
+    "timeout": 600
+  },
+  "permissions": {
+    "filesystem": "read_write",
+    "terminal": "allow"
+  }
+}
